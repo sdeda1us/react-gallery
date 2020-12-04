@@ -51,8 +51,10 @@ class App extends Component {
         <br/>
         
         <p>Gallery</p>
+        <div className="imageFrame">
         <GalleryList imagelist={this.state.imageList} key={this.state.imageList.id}
                       addlike={this.addLike}/>
+        </div>
       </div>
     );
   }
