@@ -23,6 +23,8 @@ class App extends Component {
     })
   }
 
+ 
+
   getImages = () => {
     axios.get('/gallery')
     .then((response) => {
@@ -49,11 +51,8 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        
-        <p>Gallery</p>
         <div className="imageFrame">
-        <GalleryList imagelist={this.state.imageList} key={this.state.imageList.id}
-                      addlike={this.addLike}/>
+        <GalleryList imagelist={this.state.imageList} addlike={this.addLike} toggleimage={this.toggleImage}/>
         </div>
       </div>
     );
