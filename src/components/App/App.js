@@ -8,6 +8,21 @@ class App extends Component {
     imageList: []
   }
 
+  componentDidMount(){
+    this.getImages();
+  }
+
+  addLike = (id) => {
+    axios.put(`/gallery/like/${id}`)
+    .then((response) => {
+      this.getImages();
+    })
+    .catch((error) => {
+      alert('Something Bad Happened!!')
+      console.log('Error:', error);
+    })
+  }
+
   getImages = () => {
     axios.get('/gallery')
     .then((response) => {
@@ -21,9 +36,9 @@ class App extends Component {
     })
   }
 
-  componentDidMount(){
-    this.getImages();
-  }
+
+
+  
 
 
   render() {
@@ -36,7 +51,8 @@ class App extends Component {
         <br/>
         
         <p>Gallery</p>
-        <GalleryList imagelist={this.state.imageList}/>
+        <GalleryList imagelist={this.state.imageList} key={this.state.imageList.id}
+                      addlike={this.addLike}/>
       </div>
     );
   }

@@ -7,7 +7,7 @@ class GalleryItem extends Component{
         return(
             <div>
                 <img src={this.props.image.path} className="imageDazzler"/>
-                <button>Love it!</button>
+                <button onClick={(event) => this.props.addlike(this.props.image.id)}>Love it!</button>
                 <p>{this.props.image.likes} people love this</p>
             </div>
         )
