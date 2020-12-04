@@ -1,5 +1,14 @@
+body {
+  background-image: url('/images/marble.jpg');
+}
+
 .App {
   text-align: center;
+}
+
+.App p {
+  color:white;
+  background-color: black;
 }
 
 .App-header {
@@ -38,4 +47,12 @@
   display: block;
 }
 
+.spanStyle {
+  line-height:350px;
+  height: 350px;
+  font-size: 24px;
+  color: white;
+  background-color: black;
+  padding: 1em;
+}
 
