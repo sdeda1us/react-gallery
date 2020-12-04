@@ -22,6 +22,7 @@ class App extends Component {
   }
 
   componentDidMount(){
+    this.getImages();
   }
 
 
@@ -35,7 +36,7 @@ class App extends Component {
         <br/>
         
         <p>Gallery</p>
-        <GalleryList />
+        <GalleryList imagelist={this.state.imageList}/>
       </div>
     );
   }

@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
+import GalleryItem from '../GalleryItem/Galleryitem';
 
 class GalleryList extends Component{
 
+    
+
     render(){
         return(
-            <p>Hi from template!</p>
+            <>
+            {this.props.imagelist.map((image) => 
+                <GalleryItem image={image} />
+            )
+            
+            }
+            </>
         )
     }
 }
