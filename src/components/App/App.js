@@ -13,6 +13,7 @@ class App extends Component {
   }
 
   addLike = (id) => {
+    console.log(id);
     axios.put(`/gallery/like/${id}`)
     .then((response) => {
       this.getImages();
