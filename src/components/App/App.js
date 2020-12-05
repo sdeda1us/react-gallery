@@ -6,7 +6,11 @@ import Form from '../Form/Form';
 
 class App extends Component {
   state = {
-    imageList: []
+    imageList: [],
+    newImage: [
+      {path: ''},
+      {description: ''}
+    ]
   }
 
   componentDidMount(){
@@ -25,7 +29,16 @@ class App extends Component {
     })
   }
 
- 
+ addNewImage = () => {
+   axios.post('/gallery', this.state.newImage)
+   .then((response) => {
+    this.getImages();
+  })
+  .catch((error) => {
+    alert('Something Bad Happened!!')
+    console.log('Error:', error);
+  })
+ }
 
   getImages = () => {
     axios.get('/gallery')
@@ -40,7 +53,14 @@ class App extends Component {
     })
   }
 
-
+  handleChangeFor = (propertyName) => (event) => {
+    this.setState({
+      newImage: {
+        ...this.state.newImage,
+        [propertyName]: event.target.value
+      },
+    });
+  }//end handleChangeFor
 
   
 
@@ -52,7 +72,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
-        <Form />
+        <Form addimage={this.addNewImage} handlechange={this.handleChangeFor}/>
         <br/>
         <div className="imageFrame">
         <GalleryList imagelist={this.state.imageList} addlike={this.addLike} toggleimage={this.toggleImage}/>

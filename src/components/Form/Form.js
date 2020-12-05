@@ -7,11 +7,11 @@ class Form extends Component{
             <form>
                 <h4>Add another image!</h4>
                 <label>URL</label>
-                <input type="text" />
+                <input type="text" onChange={this.props.handlechange}/>
                 <label>Description</label>
-                <input type="text" />
+                <input type="text" onChange={this.props.handlechange}/>
+                <button onClick={this.props.addimage}>Submit</button>
             </form>
-           
         )
     }
 }
