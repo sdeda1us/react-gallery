@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+import Form from '../Form/Form';
 
 class App extends Component {
   state = {
@@ -51,6 +52,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
+        <Form />
         <br/>
         <div className="imageFrame">
         <GalleryList imagelist={this.state.imageList} addlike={this.addLike} toggleimage={this.toggleImage}/>
