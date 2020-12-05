@@ -1,7 +1,7 @@
-![MIT LICENSE](https://img.shields.io/github/license/sdeda1us/https://github.com/sdeda1us/react-gallery.svg?style=flat-square)
-![REPO SIZE](https://img.shields.io/github/repo-size/sdeda1us/https://github.com/sdeda1us/react-gallery.svg?style=flat-square)
-![TOP_LANGUAGE](https://img.shields.io/github/languages/top/sdeda1us/https://github.com/sdeda1us/react-gallery.svg?style=flat-square)
-![FORKS](https://img.shields.io/github/forks/sdeda1us/https://github.com/sdeda1us/react-gallery.svg?style=social)
+![MIT LICENSE](https://img.shields.io/github/license/sdeda1us/react-gallery.svg?style=flat-square)
+![REPO SIZE](https://img.shields.io/github/repo-size/sdeda1us/react-gallery.svg?style=flat-square)
+![TOP_LANGUAGE](https://img.shields.io/github/languages/top/sdeda1us/react-gallery.svg?style=flat-square)
+![FORKS](https://img.shields.io/github/forks/sdeda1us/react-gallery.svg?style=social)
 
 
 
@@ -18,7 +18,7 @@ This full stack SERN application allows the user to browse a photo gallery of th
 
 The application's data is hosted on a SQL server, and the application can get data and modify data in the database.
 
-The full stack application is available for use on [heroku by clicking here: ](https://shielded-inlet-68730.herokuapp.com/). 
+The full stack application is available for use on [heroku by clicking here: ](https://shielded-inlet-68730.herokuapp.com/)
 
 ## Screen Shots
 
