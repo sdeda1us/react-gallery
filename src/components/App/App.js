@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 import Form from '../Form/Form';
+import Grid from '@material-ui/core/Grid';
 
 class App extends Component {
   state = {
@@ -84,14 +85,12 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
-        {JSON.stringify(this.state.newImage.path)}
-        {JSON.stringify(this.state.newImage.description)}
         <Form addimage={this.addNewImage} handlechange={this.handleChangeFor}/>
         <br/>
-        <div className="imageFrame">
+        <Grid container spacing={1} direction="row" justify="center" alignItems="center" className="imageFrame">
         <GalleryList imagelist={this.state.imageList} addlike={this.addLike} 
                       toggleimage={this.toggleImage} deleteimage={this.deleteImage}/>
-        </div>
+        </Grid>
       </div>
     );
   }
