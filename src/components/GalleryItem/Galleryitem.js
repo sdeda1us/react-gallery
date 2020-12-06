@@ -24,7 +24,7 @@ class GalleryItem extends Component{
                         {this.state.showImage === true ? <img className="imageDazzler" src={this.props.image.path} alt={this.props.image.description}></img> :  <span className="spanStyle">{this.props.image.description}</span>}                    
                     </div>
                     <button className="buttonStyle" onClick={(event) => this.props.addlike(this.props.image.id, this.props.image.likes)}>Love it!</button>
-                    <button>Delete</button>
+                    <button onClick={(event) => this.props.deleteimage(this.props.image.id)}>Delete</button>
                     <p>{this.props.image.likes === 0 ? `No people love this :(`:`${this.props.image.likes} people love this`}</p>
                     
             </div>

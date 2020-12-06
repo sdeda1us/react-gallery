@@ -41,6 +41,17 @@ class App extends Component {
   })
  }
 
+ deleteImage = (id) => {
+   axios.delete(`/gallery/${id}`)
+   .then((response) => {
+    this.getImages();
+  })
+  .catch((error) => {
+    alert('Something Bad Happened!!')
+    console.log('Error:', error);
+  })
+ }
+
   getImages = () => {
     axios.get('/gallery')
     .then((response) => {
@@ -78,7 +89,8 @@ class App extends Component {
         <Form addimage={this.addNewImage} handlechange={this.handleChangeFor}/>
         <br/>
         <div className="imageFrame">
-        <GalleryList imagelist={this.state.imageList} addlike={this.addLike} toggleimage={this.toggleImage}/>
+        <GalleryList imagelist={this.state.imageList} addlike={this.addLike} 
+                      toggleimage={this.toggleImage} deleteimage={this.deleteImage}/>
         </div>
       </div>
     );
