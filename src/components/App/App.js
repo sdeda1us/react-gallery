@@ -29,7 +29,8 @@ class App extends Component {
     })
   }
 
- addNewImage = () => {
+ addNewImage = (event) => {
+   //event.preventDefault();
    axios.post('/gallery', this.state.newImage)
    .then((response) => {
     this.getImages();
@@ -72,6 +73,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
+        {JSON.stringify(this.state.newImage.path)}
+        {JSON.stringify(this.state.newImage.description)}
         <Form addimage={this.addNewImage} handlechange={this.handleChangeFor}/>
         <br/>
         <div className="imageFrame">
