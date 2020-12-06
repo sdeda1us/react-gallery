@@ -14,7 +14,7 @@
 
 Duration: Weekend - 12 hours
 
-This full stack SERN application allows the user to browse a photo gallery of things that are important to the author. Clicking on the image toggles the image off and reveals a text description of the image. Clicking on the 'Love it!' button adds a vote to the total loves for the photo. 
+This full stack SERN application allows the user to browse a photo gallery of things that are important to the author. Clicking on the image toggles the image off and reveals a text description of the image. Clicking on the 'Love it!' button adds a vote to the total loves for the photo. Clicking on the delete button deletes the image from the display and the database. Users can add new images via the form at the top of the page by entering a working url path and a description. 
 
 The application's data is hosted on a SQL server, and the application can get data and modify data in the database.
 
@@ -34,6 +34,7 @@ The application in action
 - Node
 - PostGresSQL
 - React
+- MaterialUI
 
 #### SQL Reuirments
 - Postgre SQL
